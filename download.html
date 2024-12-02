@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gradient-to-br from-gray-900 to-black">
+<head>
+    <title>Godku Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Godku Project" property="og:title"/>
+    <meta content="The best Dragon Ball Legends mods !" property="og:description"/>
+    <meta content="https://i.imgur.com/i5t0JV2.png" property="og:image"/>
+    <meta content="#FAD0D5" data-react-helmet="true" name="theme-color"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="https://i.imgur.com/i5t0JV2.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+            scrollbar-width: none;
+        }
+        ::-webkit-scrollbar {
+            display: none; /* Hides the scrollbar */
+        }
+        .background {
+            background: linear-gradient(to bottom right,#4B0082, #000000);
+            background-size: cover;
+            background-attachment: fixed; /* This works on most desktop browsers */
+            height: 100%;
+            width: 100%;
+            position: fixed; /* Make sure it covers the entire viewport */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensures it stays behind other content */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .sidebar {
+            z-index: 20;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 16rem;
+            background-color: rgba(31, 41, 55, 0.9); /* Glass effect */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out; /* Smooth animation */
+            transform: translateX(-100%); /* Initially off-screen */
+            padding: 1.5rem; /* Add padding for overall spacing */
+        }
+
+        .sidebar.open {
+            transform: translateX(0); /* Slide in when open */
+        }
+
+        .sidebar.closed {
+            transform: translateX(-100%); /* Slide out when closed */
+        }
+
+        .sidebar .flex.items-center {
+            gap: 1rem; /* Space between close button and title/logo */
+        }
+
+        .sidebar nav {
+            margin-top: 2rem; /* Space between header and navigation links */
+        }
+
+        .sidebar nav a {
+            padding: 0.5rem 0; /* Add space around each link */
+            font-size: 1.125rem; /* Text-lg for better readability */
+            text-align: left; /* Ensure text aligns properly */
+        }
+
+        .sidebar nav a:hover {
+            text-decoration: underline; /* Visual feedback for hover */
+        }
+
+        header {
+            z-index: 10; /* Ensure it's below the sidebar */
+        }
+        .sidebar h1 {
+            font-size: 1.25rem; /* Adjust font size */
+        }
+        .sidebar img {
+            width: 2rem; /* Adjust icon size */
+            height: 2rem;
+        }
+        /* Button Container Styling */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+
+        .download-btn {
+            width: 10rem;
+            height: 10rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1); /* Slightly larger on hover */
+        }
+
+        .download-btn img {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .download-btn span {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* New Buttons Style */
+        .new-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center all buttons horizontally */
+            gap: 1rem; /* Adjust the gap between buttons */
+            margin-top: 2rem; /* Adjust top margin for spacing */
+        }
+
+
+        .new-buttons.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .new-buttons .new-btn {
+            width: 10rem;
+            height: 10rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            padding: 1rem; /* Add some padding */
+        }
+
+        .new-btn:hover {
+            transform: scale(1.1); /* Hover effect */
+        }
+
+        .new-btn span {
+            color: white; /* Text color */
+            font-size: 1rem; /* Adjust font size */
+            font-weight: 600;
+        }
+
+        .new-buttons .new-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .go-back-btn {
+            width: 10rem; /* Match the download button width */
+            height: 10rem; /* Match the download button height */
+            background-color: rgba(255, 0, 0, 0.955);
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1rem; /* Match the font size */
+            font-weight: 600; /* Match the font weight */
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            backdrop-filter: blur(5px); /* Match the background effect */
+        }
+
+        .go-back-btn:hover {
+            transform: scale(1.1); /* Hover effect to match the download button */
+            background-color: rgba(255, 0, 0, 0.653); /* Slightly lighter background on hover */
+        }
+
+        .button-hover {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button-hover:hover {
+            transform: scale(1.05); /* Slightly increase size on hover */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+        }
+
+        .download-btn.fade-out-down {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-out-down {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in {
+            opacity: 1;                    /* Fully visible */
+            transform: translateY(0);      /* Reset position */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+        }
+
+        /* Ensure smooth visibility transitions */
+        .hidden {
+            opacity: 0;                    /* Fully invisible */
+            transform: translateY(50px);   /* Start below initial position */
+        }
+
+    </style>
+</head>
+<body class="background">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar closed">
+      <!-- Header with close button, icon, and title -->
+      <div class="flex items-center justify-between mb-6">
+          <button id="closeSidebar" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">
+              ✖
+          </button>
+          <div class="flex items-center space-x-2">
+              <img src="https://i.imgur.com/i5t0JV2.png" alt="Godku Project Icon" class="w-8 h-8">
+              <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 via-black-500 to-red-500 text-transparent bg-clip-text">
+                  Godku Project
+              </h1>
+          </div>
+      </div>
+      <!-- Navigation links -->
+      <nav class="flex flex-col space-y-6">
+        <a href="index.html" class="hover:text-purple-400 text-white text-lg">Home</a>
+        <a href="download.html" class="hover:text-purple-400 text-white text-lg">Download</a>
+        <a href="documentation.html" class="hover:text-purple-400 text-white text-lg">Documentation</a>
+    </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full transparent glass z-10">
+        <nav class="flex justify-between items-center p-4">
+            <!-- Sidebar Toggle Button -->
+            <div class="flex items-center space-x-4">
+                <button id="toggleSidebar" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">
+                    ☰
+                </button>
+                <!-- Logo and Title -->
+                <div class="flex items-center space-x-2">
+                    <img src="https://i.imgur.com/i5t0JV2.png" alt="Godku Project Icon" class="w-8 h-8">
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 via-black-500 to-red-500 text-transparent bg-clip-text">Godku Project</h1>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex space-x-4">
+                <a href="https://ko-fi.com/darklaser38" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">Donations</a>
+                <a href="https://www.discord.gg/godkuproject" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">Discord Server</a>
+                <a href="https://www.youtube.com/@GodkuProject" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">YouTube</a>
+                <a href="https://www.tiktok.com/@godkuprojectreborn?_t=8rr9YGVOG6z&_r=1" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">TikTok</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 px-6">
+        <section class="text-center py-16">
+            <!-- Initial Title -->
+            <h1 id="title" class="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text mb-4">
+                Choose your OS
+            </h1>
+            
+            <!-- Buttons for Android and iOS -->
+            <div id="initial-buttons" class="button-container">
+                <div class="download-btn" id="android-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Android-icon.png" alt="Android Icon">
+                    <span>Android</span>
+                </div>
+                <div class="download-btn" id="ios-btn">
+                    <img src="https://img.icons8.com/?size=512&id=20822&format=png" alt="iOS Icon">
+                    <span>iOS</span>
+                </div>
+            </div>
+        
+            <!-- New Title -->
+            <h1 id="new-title" class="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text mb-4 hidden">
+                Choose Your Download
+            </h1>
+        
+            <!-- New Buttons -->
+            <div id="new-buttons" class="new-buttons hidden">
+                <div class="new-btn" onclick="window.location.href=''">
+                    <span>Full Version</span>
+                </div>
+                <div class="new-btn" onclick="window.location.href=''">
+                    <span>Japan Full Version</span>
+                </div>
+                <div class="new-btn" onclick="window.location.href=''">
+                    <span>Essential</span>
+                </div>
+                <div class="new-btn" onclick="window.location.href=''">
+                    <span>Japan Essential</span>
+                </div>
+                <div class="go-back-btn" onclick="goBack()">Go Back</div>
+            </div>
+
+            <div id="ios-buttons" class="ios-buttons hidden">
+                <div class="new-btn" onclick="window.location.href=''">
+                    <span>iOS Full Version</span>
+                </div>
+                <div class="new-btn" onclick="window.location.href=''">
+                    <span>iOS Lite Version</span>
+                </div>
+                <div class="go-back-btn" onclick="goBack()">Go Back</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const closeSidebar = document.getElementById('closeSidebar');
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        const androidBtn = document.getElementById('android-btn');
+        const iosBtn = document.getElementById('ios-btn');
+        const initialButtons = document.getElementById('initial-buttons');
+        const newButtons = document.getElementById('new-buttons');
+        const title = document.getElementById('title');
+        const newTitle = document.getElementById('new-title');
+    
+        function resetAnimationClasses() {
+            const elements = [androidBtn, iosBtn, title, newTitle, newButtons];
+            elements.forEach((el) => {
+                el.classList.remove('fade-in', 'fade-out-down');
+            });
+        }
+
+        function showElementWithFadeIn(element) {
+            element.classList.remove('hidden');
+            setTimeout(() => {
+                element.classList.add('fade-in');
+            }, 10);
+        }
+
+        // Open sidebar
+        toggleSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('closed');
+            sidebar.classList.add('open');
+        });
+    
+        // Close sidebar
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            sidebar.classList.add('closed');
+        });
+    
+        androidBtn.addEventListener('click', () => {
+            resetAnimationClasses();
+            // Apply fade-out-down to both buttons and the title
+            androidBtn.classList.add('fade-out-down');
+            iosBtn.classList.add('fade-out-down');
+            title.classList.add('fade-out-down');
+
+            // Wait for the animation to finish before updating the UI
+            setTimeout(() => {
+                // Hide the initial buttons and title
+                initialButtons.classList.add('hidden');
+                title.classList.add('hidden');
+
+                // Show new buttons and title with fade-in animation
+                showElementWithFadeIn(newTitle);
+                showElementWithFadeIn(newButtons);
+            }, 500); // Match this with CSS animation duration
+        });
+
+        iosBtn.addEventListener('click', () => {
+            resetAnimationClasses();
+            // Apply fade-out-down to both buttons and the title
+            androidBtn.classList.add('fade-out-down');
+            iosBtn.classList.add('fade-out-down');
+            title.classList.add('fade-out-down');
+
+            // Wait for the animation to finish before updating the UI
+            setTimeout(() => {
+                // Hide the initial buttons and title
+                initialButtons.classList.add('hidden');
+                title.classList.add('hidden');
+
+                // Update content for iOS
+                newTitle.textContent = "Choose Your iOS Download"; // Set new title
+                newButtons.innerHTML = `
+                    <div class="new-btn" onclick="window.location.href=''">
+                        <span>iOS Base Ipa</span>
+                    </div>
+                    <div class="new-btn" onclick="window.location.href=''">
+                        <span>iOS Instant Win Ipa</span>
+                    </div>
+                    <div class="new-btn" onclick="window.location.href=''">
+                        <span>iOS Injection Ipa</span>
+                    </div>
+                    <div class="go-back-btn" onclick="goBack()">Go Back</div>
+                `;
+
+                // Show new buttons and title with fade-in animation
+                showElementWithFadeIn(newTitle);
+                showElementWithFadeIn(newButtons);
+            }, 500); // Match this with CSS animation duration
+        });
+
+
+        function goBack() {
+            // Fade out new elements
+            resetAnimationClasses();
+            newButtons.classList.add('fade-out-down');
+            newTitle.classList.add('fade-out-down');
+
+            setTimeout(() => {
+                // Hide new elements
+                newButtons.classList.add('hidden');
+                newTitle.classList.add('hidden');
+                newButtons.classList.remove('fade-out-down');
+                newTitle.classList.remove('fade-out-down');
+
+                // Restore original content
+                newButtons.innerHTML = `
+                    <div class="new-btn" onclick="window.location.href='android-full-version-link'">
+                        <span>Full Version</span>
+                    </div>
+                    <div class="new-btn" onclick="window.location.href='android-japan-full-version-link'">
+                        <span>Japan Full Version</span>
+                    </div>
+                    <div class="new-btn" onclick="window.location.href='android-essential-link'">
+                        <span>Essential</span>
+                    </div>
+                    <div class="new-btn" onclick="window.location.href='android-japan-essential-link'">
+                        <span>Japan Essential</span>
+                    </div>
+                    <div class="go-back-btn" onclick="goBack()">Go Back</div>
+                `;
+
+                // Bring back original elements with fade-in
+                showElementWithFadeIn(initialButtons);
+                showElementWithFadeIn(title);
+                showElementWithFadeIn(androidBtn);
+                showElementWithFadeIn(iosBtn);
+            }, 500); // Match the fade-out animation duration
+        }
+
+
+
+        // Attach goBack function to the global scope
+        window.goBack = goBack;
+    </script>        
+</body>
+</html>
