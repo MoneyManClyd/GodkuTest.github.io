@@ -97,34 +97,42 @@
             z-index: 10; /* Ensure it's below the sidebar */
         }
 
-        /* Mobile styles */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             header nav {
-                flex-wrap: wrap; /* Allow wrapping of items */
-                gap: 1rem; /* Add spacing between elements */
+                flex-wrap: wrap; /* Allow wrapping for child elements */
+                padding: 1rem; /* Add padding */
             }
 
             header .flex.items-center {
-                flex-direction: column; /* Stack logo and toggle button */
-                align-items: flex-start; /* Align to the left for better readability */
-                gap: 0.5rem; /* Adjust spacing */
+                flex: 1; /* Allow the logo and toggle to use available space */
+                justify-content: space-between; /* Space out toggle and title/logo */
             }
 
-            header .flex.space-x-4 {
-                flex-direction: column; /* Stack the buttons */
-                gap: 0.5rem; /* Add space between buttons */
-                width: 100%; /* Make buttons take the full width */
+            header h1 {
+                font-size: 1rem; /* Smaller font size for the title */
+                text-align: center; /* Center align the title */
+                flex: 1; /* Take up remaining space */
             }
 
-            header .flex.space-x-4 a {
-                text-align: center; /* Center-align text in buttons */
-                padding: 0.5rem 1rem; /* Adjust padding for better touch targets */
+            header img {
+                width: 1.5rem; /* Adjust logo size for smaller screens */
+                height: 1.5rem;
             }
 
-            header .button-hover {
-                width: 100%; /* Full width buttons for better accessibility */
+            .button-hover {
+                flex: 1; /* Allow buttons to resize */
+                text-align: center; /* Center align button text */
+                margin: 0 0.25rem; /* Add margin between buttons */
+            }
+
+            nav .flex.space-x-4 {
+                justify-content: space-around; /* Space buttons evenly */
+                gap: 0; /* Remove unnecessary gaps */
+                flex-wrap: wrap; /* Allow wrapping if needed */
             }
         }
+
 
         .sidebar h1 {
             font-size: 1.25rem; /* Adjust font size */
