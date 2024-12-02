@@ -316,25 +316,38 @@
 
     <!-- Header -->
     <header class="fixed w-full transparent glass z-10">
-        <nav class="flex justify-between items-center p-4">
-            <!-- Sidebar Toggle Button -->
-            <div class="flex items-center space-x-4">
-                <button id="toggleSidebar" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">
-                    ☰
-                </button>
-                <!-- Logo and Title -->
+        <nav class="flex justify-between items-center p-4 flex-wrap md:flex-nowrap">
+            <!-- Left side: Sidebar Toggle and Logo -->
+            <div class="flex items-center space-x-4 w-full md:w-auto justify-between md:justify-start">
                 <div class="flex items-center space-x-2">
-                    <img src="https://i.imgur.com/i5t0JV2.png" alt="Godku Project Icon" class="w-8 h-8">
-                    <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 via-black-500 to-red-500 text-transparent bg-clip-text">Godku Project</h1>
+                    <button id="toggleSidebar" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover md:block">
+                        ☰
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <img src="https://i.imgur.com/i5t0JV2.png" alt="Godku Project Icon" class="w-8 h-8">
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 via-black-500 to-red-500 text-transparent bg-clip-text">
+                            Godku Project
+                        </h1>
+                    </div>
                 </div>
             </div>
-
-            <!-- Navigation Links -->
-            <div class="flex space-x-4">
-                <a href="https://ko-fi.com/darklaser38" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">Donations</a>
-                <a href="https://www.discord.gg/godkuproject" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">Discord Server</a>
-                <a href="https://www.youtube.com/@GodkuProject" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">YouTube</a>
-                <a href="https://www.tiktok.com/@godkuprojectreborn?_t=8rr9YGVOG6z&_r=1" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover">TikTok</a>
+    
+            <!-- Navigation Links with Responsive Checkerboard Pattern -->
+            <div class="w-full md:w-auto mt-4 md:mt-0">
+                <div class="grid grid-cols-2 md:flex md:space-x-4 gap-2 md:gap-0">
+                    <a href="https://ko-fi.com/darklaser38" class="bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover text-center">
+                        Donations
+                    </a>
+                    <a href="https://www.discord.gg/godkuproject" class="bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover text-center">
+                        Discord Server
+                    </a>
+                    <a href="https://www.youtube.com/@GodkuProject" class="bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover text-center">
+                        YouTube
+                    </a>
+                    <a href="https://www.tiktok.com/@godkuprojectreborn?_t=8rr9YGVOG6z&_r=1" class="bg-purple-600 hover:bg-purple-700 rounded-lg text-white button-hover text-center">
+                        TikTok
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
