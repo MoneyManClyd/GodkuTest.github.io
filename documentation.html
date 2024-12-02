@@ -67,6 +67,24 @@
             padding: 1.5rem; /* Add padding for overall spacing */
         }
 
+        /* Default style for desktop and larger screens */
+        #toggleSidebar {
+            width: 40px; /* Reduce width */
+            height: 40px; /* Reduce height */
+            font-size: 1.2rem; /* Adjust text/icon size */
+            padding: 4px; /* Add padding to ensure consistent spacing */
+        }
+
+        /* Adjustments for mobile */
+        @media (max-width: 768px) {
+            #toggleSidebar {
+                width: 32px; /* Even smaller for mobile screens */
+                height: 32px; /* Match width */
+                font-size: 1rem; /* Scale down the icon size */
+                padding: 2px; /* Minimal padding */
+            }
+        }        
+
         .sidebar.open {
             transform: translateX(0); /* Slide in when open */
         }
