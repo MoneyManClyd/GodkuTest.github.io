@@ -96,6 +96,36 @@
         header {
             z-index: 10; /* Ensure it's below the sidebar */
         }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            header nav {
+                flex-wrap: wrap; /* Allow wrapping of items */
+                gap: 1rem; /* Add spacing between elements */
+            }
+
+            header .flex.items-center {
+                flex-direction: column; /* Stack logo and toggle button */
+                align-items: flex-start; /* Align to the left for better readability */
+                gap: 0.5rem; /* Adjust spacing */
+            }
+
+            header .flex.space-x-4 {
+                flex-direction: column; /* Stack the buttons */
+                gap: 0.5rem; /* Add space between buttons */
+                width: 100%; /* Make buttons take the full width */
+            }
+
+            header .flex.space-x-4 a {
+                text-align: center; /* Center-align text in buttons */
+                padding: 0.5rem 1rem; /* Adjust padding for better touch targets */
+            }
+
+            header .button-hover {
+                width: 100%; /* Full width buttons for better accessibility */
+            }
+        }
+
         .sidebar h1 {
             font-size: 1.25rem; /* Adjust font size */
         }
