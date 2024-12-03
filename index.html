@@ -104,12 +104,20 @@
             text-decoration: underline; /* Visual feedback for hover */
         }
 
-        header {
+        .header {
             z-index: 10; /* Ensure it's below the sidebar */
+        }
+
+        main {
+            padding-top: 4.5rem; /* Adjust this value based on the header's height */
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            main {
+                padding-top: 10rem; /* Adjust this value based on the header's height */
+            }
+
             header nav {
                 flex-wrap: wrap; /* Allow wrapping for child elements */
                 padding: 1rem; /* Add padding */
@@ -143,7 +151,6 @@
                 flex-wrap: wrap; /* Allow wrapping if needed */
             }
         }
-
 
         .sidebar h1 {
             font-size: 1.25rem; /* Adjust font size */
@@ -225,7 +232,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="pt-20 px-6">
+    <main class="px-6">
         <section class="text-center py-16">
             <img class="w-48 mx-auto mb-6 rounded" src="https://i.imgur.com/ja6ur5X.jpeg" alt="Godku Project">
             <h1 class="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text mb-4">The Greatest Dragon Ball Legends Mod</h1>

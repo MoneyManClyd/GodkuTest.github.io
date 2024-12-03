@@ -115,8 +115,15 @@
             z-index: 10; /* Ensure it's below the sidebar */
         }
 
+        main {
+            padding-top: 4.5rem; /* Adjust this value based on the header's height */
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            main {
+                padding-top: 12rem; /* Adjust this value based on the header's height */
+            }
             header nav {
                 flex-wrap: wrap; /* Allow wrapping for child elements */
                 padding: 1rem; /* Add padding */
@@ -381,7 +388,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="pt-20 px-6">
+    <main class="px-6">
         <div id="title-container" class="text-center py-16">
             <h1 class="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text mb-4">
                 Mods documentation and FAQ
