@@ -51,7 +51,7 @@ export default function Home() {
 
   const features = [
     {
-      title: "Characters Customization",
+      title: "Character Customization",
       description: "Access exclusive custom character modifications not available in the original game.",
       icon: <Users className="w-8 h-8 text-dbz-orange" />
     },
@@ -71,39 +71,44 @@ export default function Home() {
       icon: <Shield className="w-8 h-8 text-dbz-orange" />
     }
   ];
-
+  
   const testimonials = [
     {
       name: "Dark",
-      text: "This mod completely transformed you're Dragon Ball Legends experience. The custom character movesets and improved gameplay are incredible!",
+      text: "This mod completely transforms your Dragon Ball Legends experience. The custom character movesets and improved gameplay are incredible!",
       avatar: "/GodkuWebsite/images/ui/dark.png",
     },
     {
       name: "Jon",
-      text: "I've tried many mods before, but Godku Project is by far the most stable and feature-rich. Highly recommended for people who are looking for fun and just for how compatible it is with all androids phones.",
+      text: "I've tried many mods before, but Godku Project is by far the most stable and feature-rich. Highly recommended for people who are looking for fun and appreciate how compatible it is with all Android phones.",
       avatar: "/GodkuWebsite/images/ui/jon.png",
     },
     {
       name: "OMChillz",
-      text: "Godku Project was the best thing that I'd came across. It makes everything much easier while also being safe and having lots of customer suport. In my opinion, Godku Project is the best Dragon Ball Legends mod out there. With so many features added and many more in the future, this is the best mod for Dragon Ball Legends out there.",
+      text: "Godku Project was the best thing I've come across. It makes everything much easier while also being safe and offering lots of customer support. In my opinion, Godku Project is the best Dragon Ball Legends mod out there. With so many features already included and many more coming in the future, this is the best mod for Dragon Ball Legends.",
       avatar: "/GodkuWebsite/images/ui/chillz.gif",
     },
     {
       name: "Keso",
-      text: "Darklaser is my pookie",
+      text: "Darklaser is my pookie.",
       avatar: "/GodkuWebsite/images/ui/queso.png",
     },
     {
       name: "Zack",
-      text: "THE BEST mod menu I have seen in any online game",
+      text: "THE BEST mod menu I have seen in any online game.",
       avatar: "/GodkuWebsite/images/ui/zack.png",
     },
-        {
+    {
       name: "Sed",
-      text: "I love darklaser, he is my sunshine",
+      text: "I love Darklaser, he is my sunshine.",
       avatar: "/GodkuWebsite/images/ui/sed.png",
     },
-  ];
+    {
+      name: "Rez",
+      text: "Ion even use the godku mod menu all that much bro 😭 but it is goated like yeat.",
+      avatar: "/GodkuWebsite/images/ui/rez.gif",
+    },
+  ];  
 
   return (
     <>
