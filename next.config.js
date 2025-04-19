@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/Godku_Website",
+  basePath: "/GodkuWebsite",
   output: 'export',
   distDir: 'out',
   images: {

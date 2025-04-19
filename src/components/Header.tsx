@@ -47,7 +47,7 @@ export function Header() {
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="/Godku_Website/images/logo.png"
+              src="/GodkuWebsite/images/logo.png"
               alt="Godku Logo"
               width={40}
               height={40}
@@ -96,7 +96,7 @@ export function Header() {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 w-full"
                 >
-                  <Image src="/Godku_Website/images/discord-icon.png" alt="Discord" width={20} height={20} />
+                  <Image src="/GodkuWebsite/images/discord-icon.png" alt="Discord" width={20} height={20} />
                   <span>Discord Server</span>
                 </a>
               </DropdownMenuItem>
@@ -188,7 +188,7 @@ export function Header() {
                     rel="noopener noreferrer"
                     className="flex-1 p-3 rounded-lg bg-dark-light hover:bg-dbz-blue/20 flex justify-center items-center transition-colors"
                   >
-                    <Image src="/Godku_Website/images/discord-icon.png" alt="Discord" width={24} height={24} />
+                    <Image src="/GodkuWebsite/images/discord-icon.png" alt="Discord" width={24} height={24} />
                   </a>
                   <a
                     href="https://www.youtube.com/@GodkuProject"
