@@ -187,7 +187,7 @@ export default function DownloadPage() {
             >
               <div className="space-y-4">
                 <a
-                  href="https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Full_Version_5.17.0.apk"
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Full_Version_5.17.0.apk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card hover:border-dbz-orange/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
@@ -205,7 +205,7 @@ export default function DownloadPage() {
                 </a>
 
                 <a
-                  href="https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Full_Version_Japan_5.17.0.apk"
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Full_Version_Japan_5.17.0.apk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card hover:border-dbz-orange/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
@@ -223,7 +223,7 @@ export default function DownloadPage() {
                 </a>
 
                 <a
-                  href="https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Essential_5.17.0.apk"
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Essential_Japan_5.17.0.apk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card hover:border-dbz-orange/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
@@ -241,7 +241,7 @@ export default function DownloadPage() {
                 </a>
 
                 <a
-                  href="https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Essential_Japan_5.17.0.apk"
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Essential_Japan_5.17.0.apk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card hover:border-dbz-orange/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
@@ -295,7 +295,7 @@ export default function DownloadPage() {
 
                 <div
                   className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Injection_5.17.0.ipa', '_blank')}
+                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Injection_5.17.0.ipa', '_blank')}
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -311,7 +311,7 @@ export default function DownloadPage() {
 
                 <div
                   className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Instant_Win_5.17.0.ipa', '_blank')}
+                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Instant_Win_5.17.0.ipa', '_blank')}
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -327,7 +327,7 @@ export default function DownloadPage() {
 
                 <div
                   className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.ipa', '_blank')}
+                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.ipa', '_blank')}
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -343,7 +343,7 @@ export default function DownloadPage() {
 
                 <div
                   className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/godkuproject.github.io/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.deb', '_blank')}
+                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.deb', '_blank')}
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
