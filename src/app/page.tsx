@@ -123,6 +123,11 @@ export default function Home() {
       text: "Godku Overpowered as hell. 10/10 recommend using it over regular Dragon Ball Legends",
       avatar: "/GodkuWebsite/images/ui/darkd.png",
     },
+    {
+      name: "Deeoon",
+      text: "The godku mod menu is goated icl lowkey the best ever",
+      avatar: "/GodkuWebsite/images/ui/deeoon.png",
+    },
   ];  
 
   return (
