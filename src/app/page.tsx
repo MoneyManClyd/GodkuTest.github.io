@@ -114,6 +114,11 @@ export default function Home() {
 10/10 would recommend",
       avatar: "/GodkuWebsite/images/ui/ray.png",
     },
+    {
+      name: "Shinzashi",
+      text: "Godku project is the mod application that I have ever used it makes the grind so much easier and the experience so much enjoyable definitely the best mod",
+      avatar: "/GodkuWebsite/images/ui/ren.png",
+    },
   ];  
 
   return (
