@@ -110,8 +110,7 @@ export default function Home() {
     },
     {
       name: "Rayquaza",
-      text: "Godku Project is by far the best Dragon Ball Legends Mod I've ever used, and what makes it even better is that it's completely free.
-10/10 would recommend",
+      text: "Godku Project is by far the best Dragon Ball Legends Mod I've ever used, and what makes it even better is that it's completely free. 10/10 would recommend",
       avatar: "/GodkuWebsite/images/ui/ray.png",
     },
     {
