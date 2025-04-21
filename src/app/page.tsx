@@ -116,7 +116,7 @@ export default function Home() {
     {
       name: "Shinzashi",
       text: "Godku project is the mod application that I have ever used it makes the grind so much easier and the experience so much enjoyable definitely the best mod",
-      avatar: "/GodkuWebsite/images/ui/ren.png",
+      avatar: "/GodkuWebsite/images/ui/shin.png",
     },
   ];  
 
