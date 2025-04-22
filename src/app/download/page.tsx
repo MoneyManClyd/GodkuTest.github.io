@@ -223,7 +223,7 @@ export default function DownloadPage() {
                 </a>
 
                 <a
-                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Essential_Japan_5.17.0.apk"
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Essential_5.17.0.apk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card hover:border-dbz-orange/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
