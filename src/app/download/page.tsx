@@ -277,9 +277,11 @@ export default function DownloadPage() {
               transition={{ duration: 0.3 }}
             >
               <div className="space-y-4">
-                <div
-                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Base_5.17.0.ipa', '_blank')}
+                <a
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Base_5.17.0.ipa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -291,11 +293,13 @@ export default function DownloadPage() {
                     </div>
                   </div>
                   <span className="text-dbz-blue">Download</span>
-                </div>
+                </a>
 
-                <div
-                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Injection_5.17.0.ipa', '_blank')}
+                <a
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Injection_5.17.0.ipa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -307,11 +311,13 @@ export default function DownloadPage() {
                     </div>
                   </div>
                   <span className="text-dbz-blue">Download</span>
-                </div>
+                </a>
 
-                <div
-                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Instant_Win_5.17.0.ipa', '_blank')}
+                <a
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Instant_Win_5.17.0.ipa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -323,11 +329,13 @@ export default function DownloadPage() {
                     </div>
                   </div>
                   <span className="text-dbz-blue">Download</span>
-                </div>
+                </a>
 
-                <div
-                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.ipa', '_blank')}
+                <a
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.ipa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -339,11 +347,13 @@ export default function DownloadPage() {
                     </div>
                   </div>
                   <span className="text-dbz-blue">Download</span>
-                </div>
+                </a>
 
-                <div
-                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  onClick={() => window.open('https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.deb', '_blank')}
+                <a
+                  href="https://github.com/GodkuProject/GodkuWebsite/releases/download/5.17.0/Godku_Project_Mod_Menu_5.17.0.deb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card hover:border-dbz-blue/50 p-5 flex items-center justify-between transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-dbz-blue/20 to-transparent rounded-lg flex items-center justify-center mr-4">
@@ -355,7 +365,7 @@ export default function DownloadPage() {
                     </div>
                   </div>
                   <span className="text-dbz-blue">Download</span>
-                </div>
+                </a>
 
                 <button
                   className="flex items-center gap-2 text-white/80 hover:text-white mt-6 mx-auto transition-colors"
