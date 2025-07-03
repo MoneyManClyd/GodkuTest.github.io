@@ -52,12 +52,12 @@ export default function Home() {
   const features = [
     {
       title: "Character Customization",
-      description: "Access exclusive custom character modifications not available in the original game.",
+      description: "Access modifications To Characters Such as Movesets Swap And Model Swapping.",
       icon: <Users className="w-8 h-8 text-dbz-orange" />
     },
     {
-      title: "Enhanced Gameplay",
-      description: "Experience improved gameplay mechanics and additional features for a more enjoyable gaming session.",
+      title: "Better Gameplay",
+      description: "Experience A Better Gameplay Experience With The Full Version Of The Mod.",
       icon: <Zap className="w-8 h-8 text-dbz-blue" />
     },
     {
@@ -67,17 +67,12 @@ export default function Home() {
     },
     {
       title: "Safe & Reliable",
-      description: "Developed with care to ensure stability and compatibility with your device.",
+      description: "We Make Are Mods 90% Safe And Will Not Get You Banned, We Also Try To Update The Mod Everytime A New Update Comes Out As Fast AS Possible.",
       icon: <Shield className="w-8 h-8 text-dbz-orange" />
     }
   ];
   
   const testimonials = [
-    {
-      name: "Dark",
-      text: "This mod completely transforms your Dragon Ball Legends experience. The custom character movesets and improved gameplay are incredible!",
-      avatar: "/GodkuWebsite/images/ui/dark.png",
-    },
     {
       name: "Jon",
       text: "I've tried many mods before, but Godku Project is by far the most stable and feature-rich. Highly recommended for people who are looking for fun and appreciate how compatible it is with all Android phones.",
@@ -162,7 +157,7 @@ export default function Home() {
                   Dragon Ball <span className="text-dbz-orange">Legends Mod</span>
                 </h1>
                 <p className="hero-subtitle">
-                  Experience Dragon Ball Legends like never before with enhanced gameplay, exclusive characters, and advanced customization options.
+                  Experience Dragon Ball Legends like never before with better gameplay, Custome Movesets, and advanced Model Swapping.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
                   <Link href="/download">
