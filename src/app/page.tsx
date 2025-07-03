@@ -447,7 +447,7 @@ export default function Home() {
             </div>
 
             <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50 text-sm">
-              <p>&copy; {new Date().getFullYear()} Godku Project. Created by Darklaser38. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Godku Project. Created by Darklaser38 And TheOnlyJon. All rights reserved.</p>
             </div>
           </div>
         </footer>
