@@ -153,8 +153,8 @@ export default function Home() {
                 variants={fadeInUp}
               >
                 <h1 className="hero-title">
-                  The Ultimate <br />
-                  Dragon Ball <span className="text-dbz-orange">Legends Mod</span>
+                  Godku Project <br />
+                  The Best <span className="text-dbz-orange">Legends Mod</span>
                 </h1>
                 <p className="hero-subtitle">
                   Experience Dragon Ball Legends like never before with better gameplay, Custome Movesets, and advanced Model Swapping.
